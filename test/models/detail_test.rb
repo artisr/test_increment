@@ -1,7 +1,8 @@
 require "test_helper"
 
 class DetailTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "id is uuid" do
+    detail = Detail.create(title: 'ok')
+    assert detail.id.length == 36
+  end
 end
